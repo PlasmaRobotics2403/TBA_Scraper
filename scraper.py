@@ -32,7 +32,7 @@ class tbaParse:
           country_list[country] = new_count
     
     organized_list = sorted(country_list.items(), key=lambda x: x[1], reverse=True)
-    
+    print(organized_list)
     print("\nFRC-team Country Distribution: (All-teams EVER)")
     
     for key,value in organized_list:
