@@ -17,7 +17,7 @@ class tbaParse:
     country_list = {}
     
     for num in range(0,12):
-      myRequest = (baseURL + 'teams/' + num)
+      myRequest = (baseURL + 'teams/' + str(num))
       response = requests.get(myRequest, headers=header)
       jsonified = response.json()
       
@@ -31,7 +31,7 @@ class tbaParse:
           new_count = old_count + 1
           country_list[country] = new_count
     
-    organized_list = sorted(country_list.items(), key=lambda x: x[1])
+    organized_list = sorted(country_list.items(), key=lambda x: x[1], reverse=True)
     
     print("\nFRC-team Country Distribution: (All-teams EVER)")
     
