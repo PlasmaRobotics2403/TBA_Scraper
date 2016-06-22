@@ -16,7 +16,7 @@ class tbaParse:
   def getCountryRankings(self):
     country_list = {}
     
-    for num in range(0,12)
+    for num in range(0,12):
       myRequest = (baseURL + 'teams/' + num)
       response = requests.get(myRequest, headers=header)
       jsonified = response.json()
