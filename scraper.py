@@ -43,7 +43,7 @@ class tbaParse:
       else:
         sanity_marker = ""
       
-      print ranking, sanity_marker, ": ", value
+      print(ranking, sanity_marker, ": ", value)
 
 parser = tbaParse()
 parser.getCountryRankings()
