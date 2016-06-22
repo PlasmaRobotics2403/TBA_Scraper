@@ -37,7 +37,7 @@ class tbaParse:
     
     print("\nFRC-team Country Distribution: (All-teams EVER)")
     
-    ranking = 1
+    ranking = 0
     none_count = 0
     
     for value in organized_list:
@@ -45,10 +45,15 @@ class tbaParse:
         valranking = ranking
         ranking = ranking + 1
       
+        if ranking < 10:
+          sanity_marker = " "
+        else:
+          sanity_marker = ""
+      
         country = value[0]
         teams = value[1]
       
-        print("#" + str(ranking) + " - " + country + " : " + str(teams))
+        print("#" + str(ranking) + sanity_marker + " - " + country + " : " + str(teams))
       else:
         none_count = value[0]
         
