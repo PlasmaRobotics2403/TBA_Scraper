@@ -16,7 +16,7 @@ class tbaParse:
   def getCountryRankings(self):
     country_list = {}
     
-    print("\n\n\n\nLoading Data...")
+    print("\nLoading Data...")
     
     for num in range(0,12):
       myRequest = (baseURL + 'teams/' + str(num))
@@ -38,15 +38,21 @@ class tbaParse:
     print("\nFRC-team Country Distribution: (All-teams EVER)")
     
     ranking = 1
+    none_count = 0
     
     for value in organized_list:
-      valranking = ranking
-      ranking = ranking + 1
+      if not value[0] is None:
+        valranking = ranking
+        ranking = ranking + 1
       
-      country = value[0]
-      teams = value[1]
+        country = value[0]
+        teams = value[1]
       
-      print("#" + str(ranking) + " - " + country + " : " + str(teams))
+        print("#" + str(ranking) + " - " + country + " : " + str(teams))
+      else:
+        none_count = none_count + value[0]
+        
+    print("\nTeams without a country: {0}".format(none_count))
     
     #for key,value in organized_list:
     #  ranking = key + 1
