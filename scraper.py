@@ -57,7 +57,7 @@ class tbaParse:
       else:
         none_count = value[0]
         
-    print("\nTeams without a country: " + none_count + "\n")
+    print("\nTeams without a country: " + str(none_count) + "\n")
 
 parser = tbaParse()
 parser.getCountryRankings()
