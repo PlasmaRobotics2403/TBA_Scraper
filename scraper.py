@@ -57,17 +57,7 @@ class tbaParse:
       else:
         none_count = value[0]
         
-    print("\nTeams without a country: {0}".format(none_count))
-    
-    #for key,value in organized_list:
-    #  ranking = key + 1
-    #  
-    #  if ranking < 10:
-    #    sanity_marker = " "
-    #  else:
-    #    sanity_marker = ""
-    #  
-    #  print(ranking, sanity_marker, ": ", value)
+    print("\nTeams without a country: " + none_count + "\n")
 
 parser = tbaParse()
 parser.getCountryRankings()
