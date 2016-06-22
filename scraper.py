@@ -44,7 +44,7 @@ class tbaParse:
       country = value[0]
       teams = value[1]
       
-      print("#" + ranking + " - " + Country + " : " + teams)
+      print("#" + str(ranking) + " - " + Country + " : " + str(teams))
     
     #for key,value in organized_list:
     #  ranking = key + 1
