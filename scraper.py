@@ -32,18 +32,29 @@ class tbaParse:
           country_list[country] = new_count
     
     organized_list = sorted(country_list.items(), key=lambda x: x[1], reverse=True)
-    print(organized_list)
+    
     print("\nFRC-team Country Distribution: (All-teams EVER)")
     
-    for key,value in organized_list:
-      ranking = key + 1
+    ranking = 1
+    
+    for value in organized_list:
+      valranking = ranking
+      ranking = ranking + 1
       
-      if ranking < 10:
-        sanity_marker = " "
-      else:
-        sanity_marker = ""
+      country = value[0]
+      teams = value[1]
       
-      print(ranking, sanity_marker, ": ", value)
+      print("#" + ranking + " - " + Country + " : " + teams)
+    
+    #for key,value in organized_list:
+    #  ranking = key + 1
+    #  
+    #  if ranking < 10:
+    #    sanity_marker = " "
+    #  else:
+    #    sanity_marker = ""
+    #  
+    #  print(ranking, sanity_marker, ": ", value)
 
 parser = tbaParse()
 parser.getCountryRankings()
