@@ -9,6 +9,10 @@ baseURL = 'http://www.thebluealliance.com/api/v2/'
 header = {'X-TBA-App-Id': 'frc1257:thepythonalliance:beta'}
 
 class tbaParse:
+  def __init__(self):
+    self.createTime = now
+    self.userMessage = "I'm making this __init__ script because I feel like it needs one but it has no real value."
+  
   def getCountryRankings(self):
     country_list = {}
     
@@ -40,3 +44,6 @@ class tbaParse:
         sanity_marker = ""
       
       print ranking, sanity_marker, ": ", value
+
+parser = tbaParse()
+parser.getCountryRankings()
