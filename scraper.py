@@ -16,6 +16,8 @@ class tbaParse:
   def getCountryRankings(self):
     country_list = {}
     
+    print("\n\n\n\nLoading Data...")
+    
     for num in range(0,12):
       myRequest = (baseURL + 'teams/' + str(num))
       response = requests.get(myRequest, headers=header)
@@ -44,7 +46,7 @@ class tbaParse:
       country = value[0]
       teams = value[1]
       
-      print("#" + str(ranking) + " - " + Country + " : " + str(teams))
+      print("#" + str(ranking) + " - " + country + " : " + str(teams))
     
     #for key,value in organized_list:
     #  ranking = key + 1
