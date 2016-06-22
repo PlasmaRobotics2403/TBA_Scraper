@@ -22,10 +22,9 @@ class tbaParse:
       jsonified = response.json()
       
       for team in jsonified:
-        print(team)
         country = team["country_name"]
        
-        if not country in countryList:
+        if not country in country_list:
           country_list[country] = 1
         else:
           old_count = country_list[country]
