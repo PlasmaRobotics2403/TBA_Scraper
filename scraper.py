@@ -55,7 +55,7 @@ class tbaParse:
       
         print("#" + str(ranking) + sanity_marker + " - " + country + " : " + str(teams))
       else:
-        none_count = value[0]
+        none_count = value[1]
         
     print("\nTeams without a country: " + str(none_count) + "\n")
 
